@@ -86,7 +86,7 @@ namespace TextQuest
                         case "1":
                             if (game.player.Money >= 50)
                             {
-                                game.player.Health += 5;
+                                game.player.Strength += 5;
                                 game.player.Money -= 50;
                                 Console.WriteLine("Ти покращив зброю на 5 одиниць");
                                 EnterShop(game);
@@ -100,7 +100,7 @@ namespace TextQuest
                         case "2":
                             if (game.player.Money >= 180)
                             {
-                                game.player.Health += 20;
+                                game.player.Strength += 20;
                                 game.player.Money -= 180;
                                 Console.WriteLine("Ти покращив зброю на 20 одиниць");
                                 EnterShop(game);
@@ -114,7 +114,7 @@ namespace TextQuest
                         case "3":
                             if (game.player.Money >= 400)
                             {
-                                game.player.Health += 50;
+                                game.player.Strength += 50;
                                 game.player.Money -= 400;
                                 Console.WriteLine("Ти покращив зброю на 50 одиниць");
                                 EnterShop(game);
@@ -147,7 +147,7 @@ namespace TextQuest
                                 case "1":
                                     if (game.player.Money >= 50)
                                     {
-                                        game.player.Health += 5;
+                                        game.player.Armor += 5;
                                         game.player.Money -= 50;
                                         Console.WriteLine("Ти покращив броню на 5 одиниць");
                                         EnterShop(game);
@@ -161,7 +161,7 @@ namespace TextQuest
                                 case "2":
                                     if (game.player.Money >= 180)
                                     {
-                                        game.player.Health += 20;
+                                        game.player.Armor += 20;
                                         game.player.Money -= 180;
                                         Console.WriteLine("Ти покращив броню на 20 одиниць");
                                         EnterShop(game);
@@ -175,7 +175,7 @@ namespace TextQuest
                                 case "3":
                                     if (game.player.Money >= 400)
                                     {
-                                        game.player.Health += 50;
+                                        game.player.Armor += 50;
                                         game.player.Money -= 400;
                                         Console.WriteLine("Ти покращив броню на 50 одиниць");
                                         EnterShop(game);

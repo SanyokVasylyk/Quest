@@ -48,14 +48,17 @@ namespace TextQuest
                             case "1":
                                 player.Health += 10;
                                 Console.WriteLine("Ти покращив здоров'я на 10 одиниць");
+                                SaveService.SaveOrUpdate(player); 
                                 return FightResult.Win;
                             case "2":
                                 player.Strength += 5;
                                 Console.WriteLine("Ти покращив силу на 5 одиниць");
+                                SaveService.SaveOrUpdate(player); 
                                 return FightResult.Win;
                             case "3":
                                 player.CriticalChance += 1;
                                 Console.WriteLine("Ти покращив шанс на критичний удар на 1 одиницю");
+                                SaveService.SaveOrUpdate(player); 
                                 return FightResult.Win; 
                         }
                         

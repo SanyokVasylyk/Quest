@@ -10,7 +10,8 @@ namespace TextQuest
             Console.WriteLine("1 - Арена");
             Console.WriteLine("2 - Бій з босом");
             Console.WriteLine("3 - Магазин");
-            Console.WriteLine("4 - Вийти");
+            Console.WriteLine("4 - Зберегти гру");
+            Console.WriteLine("5 - Вийти");
 
             string choice = Console.ReadLine();
 
@@ -24,8 +25,12 @@ namespace TextQuest
                     break;
                 case "3":
                     ShopService.EnterShop(game);
-                    break;        
+                    break;
                 case "4":
+                    game.Save();
+                    FirstChoice(game);
+                    break;
+                case "5":
                     Console.WriteLine("Вихід з гри. До зустрічі!");
                     break;
                 default:

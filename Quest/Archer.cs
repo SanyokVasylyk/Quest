@@ -5,8 +5,8 @@ namespace TextQuest
         public Archer(string name) : base(name)
         {
             Class = PlayerClass.Archer;
-            Health = 200;      
-            Strength = 50;
+            Health = 80;      
+            Strength = 20;
             CriticalChance = 20;
             Money = 0;
             Armor = 0;
