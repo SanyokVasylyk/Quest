@@ -16,15 +16,15 @@ namespace Quest
 
                 if (roll < 33)
                 {
-                    enemy = new Enemy("Розбійник", 50, 15);
+                    enemy = new Enemy("Розбійник", 50, 15, 5);
                 }
                 else if (roll > 66)
                 {
-                    enemy = new Enemy("Страж", 70, 10);
+                    enemy = new Enemy("Страж", 70, 10, 2);
                 }
                 else
                 {
-                    enemy = new Enemy("Борець арени", 80, 20);
+                    enemy = new Enemy("Борець арени", 80, 20, 15);
                 }
 
                 var result = FightService.StartFight(game.player, enemy);

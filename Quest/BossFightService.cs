@@ -55,13 +55,17 @@ namespace TextQuest
                                 return FightResult.Win;
                             case "3":
                                 player.CriticalChance += 5;
-                                Console.WriteLine("Ти покращив шанс на критичний удар на 5 одиницю");
+                                Console.WriteLine("Ти покращив шанс на критичний удар на 5 одиниць");
                                 return FightResult.Win;
                         }
 
                     }
-                    int strength1 = random.Next(1, enemy.Strength);
+                    int strength1 = random.Next(enemy.MinStrength, enemy.MaxStrength);
                     int strength = strength1 - player.Armor;
+                    if (strength < 0)
+                    {
+                        strength = 0;
+                    }
                     player.Health -= strength;
                     Console.WriteLine($"{enemy.Name} завдає {strength} шкоди тобі!");
 
@@ -82,8 +86,12 @@ namespace TextQuest
                     }
                     else
                     {
-                        int strength1 = random.Next(1, enemy.Strength);
+                        int strength1 = random.Next(enemy.MinStrength, enemy.MaxStrength);
                         int strength = strength1 - player.Armor;
+                        if (strength < 0)
+                        {
+                            strength = 0;
+                        }
                         Console.WriteLine("Втеча не вдалася! Ворог атакує тебе.");
                         player.Health -= strength;
                         Console.WriteLine($"{enemy.Name} завдає {strength} шкоди тобі!");

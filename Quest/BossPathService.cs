@@ -6,8 +6,8 @@ namespace TextQuest
     {
         public static void BossPath(Game game)
         {
-            Enemy boss1 = new Enemy("Бос 1 рівня", 200, 30);
-            Console.WriteLine($"\nОсь перший бос {boss1.Name} Здоров'я {boss1.Health} Сила {boss1.Strength}");
+            Enemy boss1 = new Enemy("Бос 1 рівня", 200, 40, 15);
+            Console.WriteLine($"\nОсь перший бос {boss1.Name} Здоров'я {boss1.Health} Сила {boss1.MaxStrength}");
             Console.WriteLine("1 - Розпочати бій");
             Console.WriteLine("2 - Відступити");
 
